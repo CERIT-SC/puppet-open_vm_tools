@@ -33,3 +33,7 @@ class { 'openvmtools':
 ```
 
 [OPENVMTOOLS]: http://open-vm-tools.sourceforge.net/
+
+***
+
+CERIT Scientific Cloud, <support@cerit-sc.cz>
