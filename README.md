@@ -16,7 +16,7 @@ Required modules:
 
 # Quick Start
 
-Setup process accouting
+Setup
 
 ```puppet
 include openvmtools
