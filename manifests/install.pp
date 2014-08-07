@@ -1,4 +1,4 @@
-class openvmtools::install (
+class open_vm_tools::install (
   $enabled,
   $packages
 ) {

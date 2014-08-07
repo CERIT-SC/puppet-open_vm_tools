@@ -1,28 +1,28 @@
-class openvmtools (
-  $enabled  = $openvmtools::params::enabled,
-  $packages = $openvmtools::params::packages,
-  $service  = $openvmtools::params::service,
-) inherits openvmtools::params {
+class open_vm_tools (
+  $enabled  = $open_vm_tools::params::enabled,
+  $packages = $open_vm_tools::params::packages,
+  $service  = $open_vm_tools::params::service,
+) inherits open_vm_tools::params {
 
-  class { 'openvmtools::install':
+  class { 'open_vm_tools::install':
     enabled  => $enabled,
     packages => $packages,
   }
 
-  class { 'openvmtools::service':
+  class { 'open_vm_tools::service':
     enabled => $enabled,
     service => $service,
   }
 
   if $enabled {
-    anchor { 'openvmtools::begin': ; }
-      -> Class['openvmtools::install']
-      ~> Class['openvmtools::service']
-      -> anchor { 'openvmtools::end': ; }
+    anchor { 'open_vm_tools::begin': ; }
+      -> Class['open_vm_tools::install']
+      ~> Class['open_vm_tools::service']
+      -> anchor { 'open_vm_tools::end': ; }
   } else {
-    anchor { 'openvmtools::begin': ; }
-      -> Class['openvmtools::service']
-      -> Class['openvmtools::install']
-      -> anchor { 'openvmtools::end': ; }
+    anchor { 'open_vm_tools::begin': ; }
+      -> Class['open_vm_tools::service']
+      -> Class['open_vm_tools::install']
+      -> anchor { 'open_vm_tools::end': ; }
   }
 }

@@ -1,4 +1,4 @@
-class openvmtools::params {
+class open_vm_tools::params {
   $enabled = true
 
   case $::operatingsystem {

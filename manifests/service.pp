@@ -1,4 +1,4 @@
-class openvmtools::service (
+class open_vm_tools::service (
   $enabled,
   $service
 ) {

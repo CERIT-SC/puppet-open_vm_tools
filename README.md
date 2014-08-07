@@ -19,13 +19,13 @@ Required modules:
 Setup
 
 ```puppet
-include openvmtools
+include open_vm_tools
 ```
 
 Full configuration options:
 
 ```puppet
-class { 'openvmtools':
+class { 'open_vm_tools':
   enabled  => true|false, # enable state
   packages => [...],      # override list of packages to install
   service  => '...',      # override service name
