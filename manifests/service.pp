@@ -1,6 +1,8 @@
 class open_vm_tools::service (
   $enabled,
-  $service
+  $service,
+  $hasstatus,
+  $pattern
 ) {
   $_ensure = $enabled ? {
     true  => running,
@@ -9,8 +11,10 @@ class open_vm_tools::service (
 
   if $::virtual == 'vmware' {
     service { $service:
-      ensure => $_ensure,
-      enable => $enabled,
+      ensure    => $_ensure,
+      enable    => $enabled,
+      hasstatus => $hasstatus,
+      pattern   => $pattern,
     }
   } elsif $enabled {
     warning('Not running on VMware, skipping service.')

@@ -1,3 +1,11 @@
+## 2015-02-23 - Release 0.9.3
+
+Fix service check on Debian/Ubuntu.
+
+#### Bugfixes
+
+- Fix service status check on Debian/Ubuntu.
+
 ## 2014-12-08 - Release 0.9.2
 
 Fix file/directory permissions.
