@@ -26,9 +26,11 @@ Full configuration options:
 
 ```puppet
 class { 'open_vm_tools':
-  enabled  => true|false, # enable state
-  packages => [...],      # override list of packages to install
-  service  => '...',      # override service name
+  enabled   => true|false, # enable state
+  packages  => [...],      # override list of packages to install
+  service   => '...',      # override service name
+  hasstatus => true|false, # override service hasstatus attribute
+  pattern   => '...',      # override service pattern attribute
 }
 ```
 
