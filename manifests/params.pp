@@ -15,8 +15,14 @@ class open_vm_tools::params {
       $hasstatus = true
     }
 
+    freebsd: {
+      $packages = ['open-vm-tools-nox11']
+      $service = ['vmware-guestd', 'vmware-kmod']
+      $hasstatus = true
+    }
+
     default: {
-      fail("Unsupported OS: ${::operatingsystem}")
+      warning("Unsupported OS: ${::operatingsystem}")
     }
   }
 }
